@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+</head>
+<style>
+        
+    #navbar{
+        display: flex;
+        height:50px;
+        /* border: 1px solid red; */
+        justify-content: space-around;
+        align-items: center;
+        background-color:rgba(1, 27, 255, 0.712);
+        color:white;
+        margin-bottom: 40px;
+    }
+
+   #left{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+   }
+   #right{
+    display: flex;
+    width:25%;
+    justify-content: space-around;
+    align-items: center;
+    
+   }
+   #right>p{
+    cursor: pointer;
+   }
+   #right a{
+    text-decoration: none;
+    color:white;
+
+
+   }
+   #left>p{
+    cursor: pointer;
+    color:yellow;
+    font-size:18px;
+    font-family:'Times New Roman', Times, serif
+   }
+    #srch{
+        width:75%;
+        height:100%;
+    }
+   #search{
+    width: 60%;
+    padding: 1.6% 0px;
+    border-radius:5px;
+    border: 0px;
+    padding-left:2%;
+    padding-right: 12%;
+   }
+   #left button{
+    width: 13%;
+    padding: 1.7% 0px;
+    margin-left:-2%;
+    cursor: pointer;
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+    border:none;
+    background-color: white;
+    border-left: 1px solid grey;
+    
+   }
+   #home>a{
+    text-decoration: none;
+    color: yellow;
+    font-size: 20px;
+   }
+
+
+   #footer{
+    width:80%;
+    margin: auto;
+    margin-top:100px;
+   }
+   #footer>h1{
+    font-size: 20px;
+    font-weight: 400;
+    margin-left:-4%;
+    margin-bottom:1%;
+
+   }
+   #footer>a{
+    text-decoration: none;
+    color: rgb(109, 109, 231);
+    cursor: pointer;
+   }
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------- */
+
+/* ------------------------------------------------------- */
+
+   
+    #mainDiv{
+    /* border: 1px solid red; */
+    width:80%;
+    margin:auto;
+    display:flex;
+    margin-bottom: 20px;
+
+
+
+    height:250px;
+    }
+
+    #leftDiv{
+    /* border: 1px solid red; */
+    width:50%;
+    margin:auto;
+    display: flex;
+
+    height:250px
+    }
+
+    
+
+    #rightDiv{
+    /* border: 1px solid red; */
+    width:50%;
+    margin:auto;
+    display: flex;
+
+    height:250px;
+    }
+
+    #rightDiv>div{
+
+    width: 50%;
+    /* border: 1px solid green; */
+    height:250px;
+    margin: auto; 
+    }
+
+    #rightDiv>div:first-child{
+        height:100%;
+        display: grid;
+        align-content: space-between;
+        
+    }
+
+    #rightDiv select{
+        width:20%;
+        padding: 1%;
+        background-color: whitesmoke;
+        border-radius: 4px;
+       
+
+    }
+
+    #rightDiv select:hover{
+        cursor: pointer;
+    }
+
+    #rightDiv>div:last-child>h3{
+     
+      margin-top: -1%;
+        
+    }
+    #rightDiv>div:first-child>p{
+    
+        color: red;
+        cursor: pointer;
+        margin-bottom:-1% ;
+       
+   }
+
+    #leftDiv>img{
+        width:30%;
+    }
+
+   #bookDetail{
+
+    width: 60%;
+    /* border: 1px solid green; */
+    height:250px;
+    margin: auto;
+   }
+
+   #bookDetail>p{
+
+    margin-bottom: -3%;
+    color: rgb(56, 55, 55);
+   }
+  hr{
+    width: 80%;
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
+
+  #total{
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+  }
+
+  #total>h3:first-child{
+    margin-left: 54%;
+  }
+
+  #total+button{
+    margin-left: 47%;
+    padding: 1% 12% ;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+    border: .5px solid black;
+    cursor: pointer;
+  }
+
+  #total+button:hover{
+
+    background-color: white;
+    color: black;
+  }
+
+
+</style>
+<body>
+    <div id="navbar">
+        <div id="left">
+            <p id="home"><a href="index.html">IDEAKART</a></p>
+         <div id="srch">
+            <input id="search" placeholder="Search" type=""/>
+            <button>Search</button>
+         </div>
+    </div>
+        
+        <div id="right">
+            <p><a href="about.html">About</a></p>
+            <p><a href="contact.html">Contact</a></p>
+            <p id="p1"><a href="signin.html">Sign In</a></p>
+            <p id="p2"><a href="signup.html">Sign Up</a></p>
+        </div>
+    </div>
+
+    <div id="container"></div>
+    <div id="total">
+        <h3>Subtotal</h3>
+        <h3>222.00</h3>
+    </div>
+    <button id="paym">PAYMENT</button>
+    <div id="footer">
+        <h1>Get To Know Us</h1>
+        <a href="about.html">About</a><br>
+        <a href="contact.html">Contact</a><br>
+        <a>Search</a><br>
+        <a>Privacy Policy</a><br>
+        <a>Refund Policy</a><br>
+        <a>Earn Money Online</a><br>
+        <a>QuickBuyer</a><br>
+    </div>
+</body>
+</html>
+<script>
+    bookcart=JSON.parse(localStorage.getItem("bookCartLS"))||[]
+
+   bookcart.forEach(function(ele,index){
+    ele.qtn=1
+    localStorage.setItem("bookCartLS",JSON.stringify(bookcart))
+   })
+   tot()
+
+console.log("hello")
+
+cartDisplay(bookcart)
+
+function cartDisplay(data){
+
+data.forEach(function(ele,index){
+
+  
+
+    let mainDiv=document.createElement("div")
+mainDiv.setAttribute("id","mainDiv")
+let leftDiv=document.createElement("div")
+leftDiv.setAttribute("id","leftDiv")
+let bookImage=document.createElement("img")
+bookImage.src=ele.image
+let bookDetail=document.createElement("div")
+bookDetail.setAttribute("id","bookDetail")
+let title=document.createElement("h3")
+title.innerText=ele.name;
+let author=document.createElement("p")
+author.innerText="Author: "+ele.specification[3]
+let Publishers=document.createElement("p")
+Publishers.innerText="Publishers : "+ele.specification[4]
+let binding=document.createElement("p")
+binding.innerText="Binding : "+ele.specification[0]
+let language=document.createElement("p")
+language.innerText="Language : "+ele.specification[0]
+
+
+bookDetail.append(title,author,Publishers,binding,language)
+
+leftDiv.append(bookImage,bookDetail)
+
+
+
+
+
+
+let rightDiv=document.createElement("div")
+rightDiv.setAttribute("id","rightDiv")
+
+let rightDiv1=document.createElement("div")
+let slt=document.createElement("select")
+
+slt.addEventListener("change",function(){
+
+slt_Qtn=event.target.value
+
+bookcart[index]["qtn"]=slt_Qtn
+localStorage.setItem("bookCartLS",JSON.stringify(bookcart))
+price.innerText="Rs "+ele.price1*slt_Qtn
+
+tot()
+
+})
+
+for(let i=1;i<=10;i++){
+    let opt=document.createElement("option")
+    opt.setAttribute("value",i)
+    opt.innerText=i
+
+    slt.append(opt)
+
+}
+
+let remove=document.createElement("p")
+remove.innerText="Remove Item"
+
+remove.addEventListener("click",function(){
+
+    bookcart.splice(index,1)
+
+    localStorage.setItem("bookCartLS",JSON.stringify(bookcart))
+
+    window.location.reload()
+
+})
+rightDiv1.append(slt,remove)
+let rightDiv2=document.createElement("div")
+
+let price=document.createElement("h3")
+price.innerText="Rs "+ele.price1
+
+rightDiv2.append(price)
+
+
+rightDiv.append(rightDiv1,rightDiv2)
+
+mainDiv.append(leftDiv,rightDiv)
+
+let hr=document.createElement("hr")
+
+document.querySelector("#container").append(mainDiv,hr)
+
+})
+
+
+}
+
+
+
+function tot(){
+
+    R=bookcart.reduce(function(acc,ele){
+
+return acc+ele.price1*ele.qtn
+},0)
+
+let subtotal=document.querySelector("#total>h3+h3").innerText=R
+
+localStorage.setItem("payPrice",subtotal)
+}
+
+document.querySelector("#paym").addEventListener("click",function(){
+
+window.location.href="payment.html"
+})
+
+</script>

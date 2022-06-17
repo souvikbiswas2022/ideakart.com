@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+
+
+        *{
+            margin: 0px;
+            padding:0px;
+            box-sizing: border-box;
+        }
+        body{
+        background-image: url("https://ihcbyclubwyndham.com/app/uploads/2020/09/donatebook-scaled.jpg");
+    }
+
+        div{
+        background-color: white;
+        width:25%;
+        margin: auto;
+        padding: 3%;
+        margin-top:200px;
+        }
+       label{
+        font-size:20px;
+       }
+        input{
+            width:100%;
+            font-size: 20px;
+            display: block;
+            padding: 8px;
+            border-radius:5px;
+            margin-top:5px;
+            border: .5px solid grey;
+        }
+
+        input:last-child{
+           border: 0px;
+           padding:15px;
+           cursor: pointer;
+           background-color: rgb(131, 218, 131);
+           margin-bottom: 6%;
+        }
+        input:last-child:hover{
+            background-color: black;
+            color:white
+        }
+
+        body{
+            background-color: rgb(238, 238, 238);
+        }
+        h1{
+            text-align: center;
+        }
+        #login>a{
+            
+            text-decoration: none;
+           color: rgb(84, 84, 194);
+
+        }
+
+    </style>
+</head>
+<body>
+  
+   <div id="login">
+    <h1>Log in</h1>
+    <form id="form">
+        <label>Email</label><br>
+        <input id="email" type="email" placeholder="Email"/><br>
+        <label>Password</label><br>
+        <input id="password" type="password" placeholder="Password"/><br>
+        <input type="submit" value="Log in"/>
+    </form>
+    <a href="signup.html">Sign up</a><br>
+    <a>Forgot your password?</a>
+   </div>
+
+</body>
+</html>
+<script>
+    let form=document.querySelector("#form");
+    let userData=JSON.parse(localStorage.getItem("userData"))|| [];
+
+    form.addEventListener("submit",function(){
+    event.preventDefault();
+    let data={
+        
+        email:form.email.value,
+        password:form.password.value
+    }
+     if(checkEmails(data.email,data.password)===true){
+        
+        localStorage.setItem("signin",JSON.stringify(data))
+        alert("Sign in Successful")
+        localStorage.setItem("permit",true)
+        window.location.href="index.html"
+
+
+     }
+     else{
+        alert("Wrong Username or Password")
+     }
+
+    })
+
+
+    function checkEmails(email,password){
+        let filtered=userData.filter(function(ele){
+            return email===ele.email && password===ele.password
+        })
+
+        if(filtered.length>0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+</script>

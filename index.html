@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideakart.com</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            font-size:14px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+    #navbar{
+        display: flex;
+        height:50px;
+        /* border: 1px solid red; */
+        justify-content: space-around;
+        align-items: center;
+        background-color:rgba(1, 27, 255, 0.712);
+        color:white;
+    }
+
+   #left{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+   }
+   #right{
+    display: flex;
+    width:25%;
+    justify-content: space-around;
+    align-items: center;
+    
+   }
+   #right>p{
+    cursor: pointer;
+   }
+   #right a{
+    text-decoration: none;
+    color:white;
+
+
+   }
+   #left>p{
+    cursor: pointer;
+    color:yellow;
+    font-size:18px;
+    font-family:'Times New Roman', Times, serif
+   }
+    #srch{
+        width:75%;
+        height:100%;
+    }
+   #search{
+    width: 60%;
+    padding: 1.6% 0px;
+    border-radius:5px;
+    border: 0px;
+    padding-left:2%;
+    padding-right: 12%;
+   }
+   #left button{
+    width: 13%;
+    padding: 1.7% 0px;
+    margin-left:-2%;
+    cursor: pointer;
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+    border:none;
+    background-color: white;
+    border-left: 1px solid grey;
+    
+   }
+   #home>a{
+    text-decoration: none;
+    color: yellow;
+    font-size: 20px;
+   }
+
+
+   #footer{
+    width:80%;
+    margin: auto;
+    margin-top:100px;
+   }
+   #footer>h1{
+    font-size: 20px;
+    font-weight: 400;
+    margin-left:-4%;
+    margin-bottom:1%;
+
+   }
+   #footer>a{
+    text-decoration: none;
+    color: rgb(109, 109, 231);
+    cursor: pointer;
+   }
+
+
+
+   @media all and (min-width:480px) and (max-width:720px){
+   
+    
+   #right{
+    display: none;
+   
+    
+   }
+
+   #left button{
+   display: none;
+    
+   }
+
+   #search{
+   display: none;
+   }
+
+   #cards{
+ 
+ grid-template-columns: repeat(2,1fr);
+
+}
+
+}
+
+
+@media all and (min-width:320px) and (max-width:479px){
+    #right{
+    display: none;
+   
+    
+   }
+
+   #left button{
+   display: none;
+    
+   }
+
+   #search{
+   display: none;
+   }
+
+
+
+}
+
+
+
+
+/* ------------------------------------------------------- */
+
+
+
+
+
+
+#cards{
+    display: grid;
+    /* border: 1px solid green; */
+    width:100%;
+    
+    
+    grid-template-columns: repeat(4,3fr);
+    gap:2%;
+}
+#main{
+    width:80%;
+    height:auto;
+    margin:auto;
+    /* border: 1px solid teal; */
+  
+}
+#main>h2{
+    padding:10px;
+    font-weight: 400;
+    font-size:25px;
+}
+#card>img{
+    width:90%;
+   padding:5%;
+   cursor: pointer;
+}
+#card:hover{
+    background-color: aliceblue;
+}
+
+#card{
+    /* border: 1px solid red; */
+    width:auto;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    border-radius: 2%;
+}
+
+
+#bttm1{
+    /* border: 1px solid red; */
+    padding:4%;
+    border-bottom:1px solid grey;
+   
+}
+#bttm1>p:last-child{
+    color:teal;
+}
+#bttm2{
+    /* border:1px solid red; */
+    display: flex;
+    justify-content: space-around;
+}
+#bttm2 p{
+    color: blue;
+}
+#bttm2 img{
+    width:17%;
+    height:20px;
+
+}
+#bttm2>div{
+    display: flex;
+    justify-content: space-between;
+    padding:4%;
+    width: 50%; 
+}
+/* #bttm2>div :first-child{
+    border: 1px solid grey;
+} */
+   
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div id="left">
+            <p id="home"><a href="index.html">IDEAKART</a></p>
+         <div id="srch">
+            <input id="search" placeholder="Search" type=""/>
+            <button>Search</button>
+         </div>
+    </div>
+        
+        <div id="right">
+            <p><a href="about.html">About</a></p>
+            <p><a href="contact.html">Contact</a></p>
+            <p id="p1"><a href="signin.html">Sign In</a></p>
+            <p id="p2"><a href="signup.html">Sign Up</a></p>
+            <p ><a href="cart.html">Cart</a></p>
+        </div>
+    </div>
+    <div id="main">
+        <h2>Top Reads</h2>
+        <div id="cards">
+
+        </div>
+    </div>
+    <div id="footer">
+        <h1>Get To Know Us</h1>
+        <a href="about.html">About</a><br>
+        <a href="contact.html">Contact</a><br>
+        <a>Search</a><br>
+        <a>Privacy Policy</a><br>
+        <a>Refund Policy</a><br>
+        <a>Earn Money Online</a><br>
+        <a>QuickBuyer</a><br>
+    </div>
+</body>
+</html>
+<script>
+    data=[
+
+{
+name:"All-American Murder",
+image:"https://images-eu.ssl-images-amazon.com/images/I/511LJOjS7JL.jpg",
+price1:254,
+price2:[{store:"Amazon, Paperback",rs:299.25},{store:"Amazon, Paperback",rs:599.0}],
+specification:["Paperback","English","400","James Patterson","Arrow","1787460665","9781787460669","12.9*2.59*19.81"],
+description:"He had it all. A $40 million NFL contract. Fame. Adoration.Until he was convicted of murder, and jailed for life without parole.A true story told by the master of Crime fiction, All-American Murder is the tale of Aaron Hernandez, once the NFL's youngest player, a star for the New England Patriots, and a Super Bowl veteran. His every move played out in the headlines, and yet he led a secret life – one that ended in a maximum-security prison. What drove him to go so wrong, so fast?He'd courted trouble since school, and trouble followed him to the NFL. Between the summers of 2012 and 2013, Hernandez was linked to a series of violent incidents culminating in the Death of Odin Lloyd, a semi-pro American Football player who dated the sister of Hernandez’s fiancée.This explosive account of the rise and fall of a life cut short in the dark shadow of fame, culminating in Hernandez's own untimely Death behind bars, is built on original, in-depth reporting. Was Hernandez a victim himself, suffering violence-inducing brain damage from the Sport that meant everything to him – or was he just a heartless killer?_____________________________From the writer of no. 1 bestseller The President is Missing.‘The man behind the hugely popular Alex Cross series has interviewed those closest to Hernandez to get the full, winding story on the NFL star turned murderer.’ Sun‘Patterson unravels Hernandez’s complicated and troubling story.’ CBS News'This disturbing true-crime thriller is another fast and captivating Patterson read.' USA Today",
+why:"This book has been written by James Patterson, who has written books like Miracle at St Andrews,The Fall of Crazy House,All-American Murder,Not So Normal Norbert,Not So Normal Norbert. The books are written in Contemporary Fiction,Crime & Thriller,Biographies & Autobiographies,Humour,Science Fiction category. This book is read by people who are interested in reading books in category : Biographies & Autobiographies. So, if you want to explore books similar to This book, you must read and buy this book.",
+time:["80 hours","40 hours","26 hours","13 hours"]
+
+},
+{
+name:"Zero Not Out",
+image:"https://images-eu.ssl-images-amazon.com/images/I/41bG7L7Q5uL.jpg",
+price1:187,
+price2:[{store:"Amazon, Paperback",rs:220.0},{store:"",rs:""}],
+specification:["Paperback","English","194","Vamshi Krishna","Invincible Publishers","9388333780","9789388333788","13.0*2.01*21.01"],
+description:"Varun Krishna, hailing from a middle-class family, works hard to realize his dream of getting into one of the top IITs. During his four years of college, he would go on to make friends and mentors for life. He would also meet his first love Nitya Iyer during his first year in college. Due to some unfortunate turn of events, he had to part ways with her as soon as he finishes college because of which he would go on a self-destruction mode. How life takes him forward from such a miserable state to building a startup aimed at curbing suicides forms the rest of the story. Riding high on emotions while emphasizing the role of family during crisis time, the novel illustrates the theme of how a father is looked up to as a real hero by his son.About the Author Vamshi Krishna spends most of his time writing - code or stories. He says he is a Software engineer by chance and a writer by choice. Apart from writing, he reads a lot about cricket, love, women, and stories of failures. He is also a fitness enthusiast and a huge fan of MS Dhoni. He says his 4 year journey at IIT-BHU is the best time of his life. He strongly believes that every student, for at least a couple of years in his early 20s should experience hostel life. 'Nobody dies a virgin, life fucks everyone' is the motto he believes in. 'Zero Not Out' is his debut fiction novel and prior to this, he authored a coding related book. This novel is inspired by his real-life incidents (and accidents).",
+why:"This book has been written by Vamshi Krishna, who has written books like Zero Not Out,Design Patterns in Swift: A Different Approach to Coding with Swift. The books are written in Language & Linguistics,Mobile Phone Programming category. This book is read by people who are interested in reading books in category : Language & Linguistics. So, if you want to explore books similar to This book, you must read and buy this book.",
+time:["38 hours","19 hours","12 hours","6 hours"]
+},
+
+{
+name:"Sebastian and Sons: A Brief History of Mrdangam Makers",
+image:"https://images-eu.ssl-images-amazon.com/images/I/51cSlS7wH%2BL.jpg",
+price1:488,
+price2:[{store:"Amazon, Hardcover",rs:575.0},{store:"",rs:""}],
+specification:["Hardcover","English","384","T.M. Krishna","Context","9389152186","9789389152180","14.0*2.49*21.01"],
+description:"The mrdangam is an integral part of the Karnatik stage, its primary percussion instrument. Yet—startling as this is— the instrument as we know it is only a century old. T.M. Krishna investigates the History of the mrdangam and meets the invisible keepers of a tradition: the mrdangam makers.The making process is an intellectually, aesthetically and physically taxing one. From acquiring the skins for the circular membranes and straps to the wood for the drum, from curing the material to the final construction, and at the end of it all, making sure that it has the tone that the mrdangam player wants, mrdangam-making is also a highly nuanced operation at every stage.While several artists have been credited with the evolution of the instrument, including the stalwart Palghat Mani Iyer, none of them had knowledge of a fundamental aspect of the making: hide. The quality of the hide and how it is cured, cut, stretched, bound and braided impacts the tone, timbre and sound of the instrument. This requires a highly tuned ear and an ability to translate abstract ideas expressed by musicians into the corporeal reality of a mrdangam. Yet, their contribution to the art of the mrdangam is dismissed as labour and repair—when it is spoken of at all.There are legendary mrdangam players, yes; there are also distinguished mrdangam makers, many of them from Dalit Christian communities, who remain on the fringes of the Karnatik community. Sebastian and Sons explores the world of these artists, their History, lore and lived experience to arrive at a more organic and holistic understanding of the music that the mrdangam makes.",
+why:"This book has been written by T.M. Krishna, who has written books like Sebastian and Sons: A Brief History of Mrdangam Makers,Reshaping Art,A Southern Music : The Karnatik Story. The books are written in Music category. This book is read by people who are interested in reading books in category : Music. So, if you want to explore books similar to This book, you must read and buy this book.",
+time:["76 hours","38 hours","25 hours","12 hours"]
+},
+
+{
+name:"ESE 2019 Prelims Exam: Mechanical Engineering - Topicwise Objective Solved Paper - Vol. I",
+image:"https://images-eu.ssl-images-amazon.com/images/I/51e9fr0xmCL.jpg",
+price1:403,
+price2:[{store:"Amazon, Paperback",rs:475.0},{store:"",rs:""}],
+specification:["Paperback","English","596","Made Easy Editorial Board","Made Easy Publications","9351473414","9789351473411",""],
+description:"ESE- 2019 Mechanical Engineering Objective book is designed to help aspiring engineers to strengthen their grasp and understanding of the concepts of the subject. The book approaches the subject in a very conceptual and coherent manner. It Covers questions from last 24 years of ESE examinations. The answers and the explanations of the questions along with the formula and details are provided too. The illustrative and solved examples will facilitate easy mastering of the concepts and their applications.",
+why:"This book has been written by Made Easy Editorial Board, who has written books like SSC: JE Civil Engineering - Previous Year Conventional Solved Papers,General Studies - 2020 for UPSC, SSC, Railways, PSUs, Banking, State PSCs and Other Competitive Examinations,Basics of Energy & Environment: ESE 2020: Prelims: Gen. Studies & Engg. Aptitude,ESE 2019: Preliminary Exam: Electrical Engineering Objective Paper - Vol. 2,GATE 2020: Electronics Engineering Previous Solved Papers. The books are written in Engineering Entrance,UPSC Civil Services Mains,Indian Engineering Services category. This book is read by people who are interested in reading books in category : Indian Engineering Services. So, if you want to explore books similar to This book, you must read and buy this book.",
+time:["	119 hours","59 hours","39 hours","19 hours"]
+},
+
+{
+name:"Mastering JavaScript Functional Programming",
+image:"https://images-eu.ssl-images-amazon.com/images/I/51akkAE6wPL.jpg",
+price1:702,
+price2:[{store:"Amazon, Paperback",rs:826.0},{store:"",rs:""}],
+specification:["Paperback","English","386","Federico Kereki","Packt Publishing Limited","1787287440","9781787287440","19.05*2.21*23.5"],
+description:"Master Functional Programming techniques with this comprehensive guide for writing cleaner, safer, high-performing JavaScript codes About This Book * Become proficient and skilled with Functional Programming in JavaScript to solve real-world development problems * Successfully apply Functional Programming concepts and techniques to everyday JavaScript Programming * Bring modularity, reusability, testability, and performance to your web apps Who This Book Is For If you are a JavaScript developer and want to apply functional Programming techniques, then this book is for you. Only a Basic knowledge of the concepts of functional Programming is required for this book. What You Will Learn * Create more reliable code with closures and immutable data * Convert existing methods into pure functions, and loops into recursive methods * Develop more powerful applications with currying and function composition * Separate the Logic of your system from implementation details * Implement composition and chaining techniques to simplify coding * Use functional Programming techniques where it makes the most sense In Detail Functional Programming is a Programming paradigm for developing Software using functions. Learning to use functional Programming is a good way to write more concise code, with greater concurrency and performance. The JavaScript language is particularly suited to functional programming. This book provides comprehensive coverage of the major topics in functional Programming with JavaScript to produce shorter, clearer, and testable programs. You'll delve into functional programming; including writing and testing pure functions, reducing side-effects, and other features to make your applications functional in nature. Specifically, we'll explore techniques to simplify coding, apply recursion for loopless coding, learn ways to achieve immutability, implement Design patterns, and Work with data types. By the end of this book, you'll have developed the JavaScript skills you need to program functional applications with confidence. Style and approach This book takes an easy-to-follow, step-by-step tutorial approach. You will make the most of JavaScript Programming with a focus on the progression of functional Programming techniques, styles, and detailed information about JavaScript libraries.",
+why:"This book has been written by Federico Kereki, who has written books like Mastering JavaScript Functional Programming: Write clean, robust, and maintainable web and server code using functional JavaScript, 2nd Edition,Mastering JavaScript Functional Programming. The books are written in Internet & Web category. This book is read by people who are interested in reading books in category : Internet & Web. So, if you want to explore books similar to This book, you must read and buy this book.",
+time:["77 hours","38 hours","25 hours","12 hours"]
+},
+{
+name:"Cellular Physiology and Neurophysiology: Mosby Physiology Series (Mosby's Physiology Monograph)",
+image:"https://images-eu.ssl-images-amazon.com/images/I/41VuFIm46JL.jpg",
+price1:543,
+price2:[{store:"Amazon, Paperback",rs:543}],
+specification:["Paperback","English","386","Federico Kereki","Packt Publishing Limited","1787287440","9781787287440","19.05*2.21*23.5"],
+description:"Master Functional Programming techniques with this comprehensive guide for writing cleaner, safer, high-performing JavaScript codes About This Book * Become proficient and skilled with Functional Programming in JavaScript to solve real-world development problems * Successfully apply Functional Programming concepts and techniques to everyday JavaScript Programming * Bring modularity, reusability, testability, and performance to your web apps Who This Book Is For If you are a JavaScript developer and want to apply functional Programming techniques, then this book is for you. Only a Basic knowledge of the concepts of functional Programming is required for this book. What You Will Learn * Create more reliable code with closures and immutable data * Convert existing methods into pure functions, and loops into recursive methods * Develop more powerful applications with currying and function composition * Separate the Logic of your system from implementation details * Implement composition and chaining techniques to simplify coding * Use functional Programming techniques where it makes the most sense In Detail Functional Programming is a Programming paradigm for developing Software using functions. Learning to use functional Programming is a good way to write more concise code, with greater concurrency and performance. The JavaScript language is particularly suited to functional programming. This book provides comprehensive coverage of the major topics in functional Programming with JavaScript to produce shorter, clearer, and testable programs. You'll delve into functional programming; including writing and testing pure functions, reducing side-effects, and other features to make your applications functional in nature. Specifically, we'll explore techniques to simplify coding, apply recursion for loopless coding, learn ways to achieve immutability, implement Design patterns, and Work with data types. By the end of this book, you'll have developed the JavaScript skills you need to program functional applications with confidence. Style and approach This book takes an easy-to-follow, step-by-step tutorial approach. You will make the most of JavaScript Programming with a focus on the progression of functional Programming techniques, styles, and detailed information about JavaScript libraries.",
+why:"This book has been written by Federico Kereki, who has written books like Mastering JavaScript Functional Programming: Write clean, robust, and maintainable web and server code using functional JavaScript, 2nd Edition,Mastering JavaScript Functional Programming. The books are written in Internet & Web category. This book is read by people who are interested in reading books in category : Internet & Web. So, if you want to explore books similar to This book, you must read and buy this book.",
+time:["77 hours","38 hours","25 hours","12 hours"]
+},
+{
+name:"5 Steps to a 5: AP Physics C 2019",
+image:"https://images-eu.ssl-images-amazon.com/images/I/51p1PtxLOhL.jpg",
+price1:743,
+price2:[{store:"Amazon, Paperback",rs:743}],
+specification:["Paperback","English","386","Federico Kereki","Packt Publishing Limited","1787287440","9781787287440","19.05*2.21*23.5"],
+description:"Get ready to ace your AP Physics C Exam with this easy-to-follow study guide5 Steps to a 5: AP Physics C 2019 introduces an easy to follow, effective 5-step study plan to help you build the skills, knowledge, and test-taking confidence you need to achieve a high score on the exam. This essential guide reflects the latest course syllabus and includes 3 full-length practice exams, plus the most up-to-date scoring information. A bonus interactive AP Planner app delivers a customizable study schedule and extra exam practice to your mobile device. 5 Steps to a 5: AP Physics C 2019 features: -New: 3 Practice Exams -5 Steps to a 5 program-An interactive, customizable AP Planner app that lets you practice on a mobile device",
+why:"This book has been written by Greg Jacobs, who has written books like 5 Steps to a 5: AP Physics C 2019. The books are written in Children's & Young Adult category. This book is read by people who are interested in reading books in category : Children's & Young Adult. So, if you want to explore books similar to This book, you must read and buy this book.",
+time:["77 hours","38 hours","25 hours","12 hours"]
+},
+
+{
+name:"First Steps: 1 e4 e5",
+image:"https://images-eu.ssl-images-amazon.com/images/I/51gT92%2BZLvL.jpg",
+price1:346,
+price2:[{store:"Amazon, Paperback",rs:743}],
+specification:["Paperback","English","386","Federico Kereki","Packt Publishing Limited","1787287440","9781787287440","19.05*2.21*23.5"],
+description:"Starting a Chess game with 1 e4 e5 is so common that the resulting complex of opening Systems traditionally commands its own sobriquet, The central structure with pawns on e4 and e5 often leads to play based around highly classical themes which are the bedrock of successful Chess understanding. ----- First Steps is a new opening series and is ideal for improving Players who want simple and straightforward explanations. First Steps emphasizes: ----- * the Basic principles --- * the Basic strategies --- * the key tricks and Traps ----- First Steps Books are based around carefully selected instructive Games which demonstrate exactly what both sides are trying to achieve. There is enough Theory to enable the improving player to get to grips with the opening without feeling overwhelmed. If you want to take up a new opening, First Steps is the ideal place to start.",
+why:"This book has been written by John Emms, who has written books like First Steps: 1 e4 e5,The Nimzo-Indian: Move by Move. The books are written in Games & Quizzes category. This book is read by people who are interested in reading books in category : Games & Quizzes. So, if you want to explore books similar to This book, you must read and buy this book.",
+time:["77 hours","38 hours","25 hours","12 hours"]
+},
+
+{
+name:"Creating Compassionate Kids – Essential Conversations to Have with Young Children",
+image:"https://images-eu.ssl-images-amazon.com/images/I/41LnsS8xjRL.jpg",
+price1:746,
+price2:[{store:"Amazon, Paperback",rs:743}],
+specification:["Paperback","English","386","Federico Kereki","Packt Publishing Limited","1787287440","9781787287440","19.05*2.21*23.5"],
+description:"Starting a Chess game with 1 e4 e5 is so common that the resulting complex of opening Systems traditionally commands its own sobriquet, The central structure with pawns on e4 and e5 often leads to play based around highly classical themes which are the bedrock of successful Chess understanding. ----- First Steps is a new opening series and is ideal for improving Players who want simple and straightforward explanations. First Steps emphasizes: ----- * the Basic principles --- * the Basic strategies --- * the key tricks and Traps ----- First Steps Books are based around carefully selected instructive Games which demonstrate exactly what both sides are trying to achieve. There is enough Theory to enable the improving player to get to grips with the opening without feeling overwhelmed. If you want to take up a new opening, First Steps is the ideal place to start.",
+why:"This book has been written by John Emms, who has written books like First Steps: 1 e4 e5,The Nimzo-Indian: Move by Move. The books are written in Games & Quizzes category. This book is read by people who are interested in reading books in category : Games & Quizzes. So, if you want to explore books similar to This book, you must read and buy this book.",
+time:["77 hours","38 hours","25 hours","12 hours"]
+},
+]
+
+localStorage.setItem("Data",JSON.stringify(data))
+
+
+if(JSON.parse(localStorage.getItem("permit"))){
+
+  document.querySelector("#p1").innerHTML=""
+  document.querySelector("#p2").innerHTML="Logout"
+
+document.querySelector("#p2").addEventListener("click",notpermit())
+
+
+
+}
+
+function notpermit(){
+localStorage.setItem("permit",false)
+window.location.reload()
+}
+
+
+let cards=document.querySelector("#cards")
+data.forEach(function(ele){
+
+    let card=document.createElement("div")
+    card.setAttribute("id","card")
+
+    card.addEventListener("click",function(){
+
+        localStorage.setItem("book",JSON.stringify(ele))
+
+        window.location.href="page.html"
+    })
+
+
+    let image=document.createElement("img")
+    image.src=ele.image;
+    card.append(image)
+
+    let first_bottom=document.createElement("div")
+    first_bottom.setAttribute("id","bttm1")
+    let book_name=document.createElement("p")
+    book_name.innerText=ele.name
+    let book_price=document.createElement("p")
+    book_price.innerText=ele.price1;
+    first_bottom.append(book_name,book_price)
+    card.append(first_bottom)
+
+
+    let  second_bottom=document.createElement("div")
+    second_bottom.setAttribute("id","bttm2")
+
+    let bottom_1=document.createElement("div")
+    // bottom_1.addEventListener("id","bottom1")
+    // bottom_1.addEventListener("id","div_first")
+    let cart_logo=document.createElement("img")
+    cart_logo.src="https://cdn-icons.flaticon.com/png/512/2838/premium/2838838.png?token=exp=1655212598~hmac=73efb14f97aa8f151e858fccb988a606"                            //
+    let view=document.createElement("p")
+    view.innerText="View Now"
+    bottom_1.append(cart_logo,view)
+
+    let bottom_2=document.createElement("div")
+    let more_logo=document.createElement("img")
+    more_logo.src="https://as2.ftcdn.net/v2/jpg/03/05/87/61/1000_F_305876177_4EzB8UJafxNruTRjfLgc57mb07Qn1cNv.jpg"                            //
+    let more=document.createElement("p")
+    more.innerText="More details"
+    bottom_2.append(more_logo,more)
+
+    second_bottom.append(bottom_1,bottom_2)
+    card.append(second_bottom)
+    
+    cards.append(card)
+
+
+})
+
+
+
+
+
+</script>

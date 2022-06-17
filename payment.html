@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <style>
+        
+        body{
+        background-image: url("https://ihcbyclubwyndham.com/app/uploads/2020/09/donatebook-scaled.jpg");
+    }
+        #main{
+
+            width: 40%;
+            /* border: 1px solid red; */
+            margin: auto;
+            margin-top: 50px;
+            text-align: center;
+            background-color: white;
+            padding: 0px 0px 2% 0px;
+        }
+        #form{
+            background-color: white;
+        }
+
+        input{
+            width:80%;
+            height: 30px;
+            margin-bottom: 5%;
+            /* border-radius:6px; */
+            background-color: white;
+            border: 1px solid grey;
+        }
+
+        #bill{
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        lable{
+            
+           
+        }
+        button{
+            padding:2% 25%;
+            border-radius:20px;
+            cursor: pointer;
+            border: none;
+            background-color: rgb(135, 245, 135)
+        }
+    </style>
+</head>
+<body>
+    
+<div id="main">
+    <h2>Lets's finish </h2>
+    <form id="form">
+        <lable>NAME ON CARD</lable><br>
+        <input id="name" type="text" /><br>
+
+        <lable>CARD NUMBER</lable><br>
+        <input id="exp" type="text"/><br>
+
+        <lable>EXPIRY DATE (MM YYYY)</lable><br>
+        <input id="exp" type="number"/><br>
+
+        <lable>CVC / CVV</lable><br>
+        <input id="cvv" type="number"/>
+      
+    </form>
+    <div id="bill">
+        <h3>Total Bill</h3>
+        <h3 id="dis"></h3>
+    </div>
+    <button>PAY</button>
+</div>
+
+</body>
+</html>
+<script>
+
+    document.querySelector("#dis").innerText=localStorage.getItem("payPrice")
+    
+</script>
