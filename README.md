@@ -28,23 +28,34 @@ It have a user friendly search engine and a quick delivery system. With this it 
 ## A glimpse of our website
 
 
+###  Sign in Page
+
+<img src="./img/sign.png" width="900px" height="500px"/>
+
+
+
 ###  Short Tour of Landing Page
 
 
-<img src="./gif/1.gif" width="900px" height="500px"/>
+<img src="./img/home.gif" width="900px" height="500px"/>
 
 
-###  Insight page and Filtering Functionality
+###  Contact Page
+
+<img src="./img/contact.png" width="900px" height="500px"/>
 
 
-<img src="./gif/11.gif" width="900px" height="450px"/>
+###  book details page
+
+
+<img src="./img/book.gif" width="900px" height="450px"/>
 
 
 
-### Short tour of  News Page 
+### Cart Page
 
 
-<img src="./gif/22.gif" width="900px" height="450px"/>
+<img src="./img/cart.gif" width="900px" height="450px"/>
 
 ## Deployed Link
 <a href="ubiquitous-sunshine-d0ac3f.netlify.app/">ideakart</a>
