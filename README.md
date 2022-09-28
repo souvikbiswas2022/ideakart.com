@@ -18,14 +18,14 @@ It have a user friendly search engine and a quick delivery system. With this it 
 <li> Dynamically loaded landing page </li>
 <li> Sign in and Sign up functionality </li>
 <li> Dynamic book details page </li>
-<li> simple About page  </li>
-<li> a contact page </li>
+<li> Simple About page  </li>
+<li> A contact page </li>
 <li> cart page </li>
 <li> Add to cart functionality </li>
 <li> Functionality to calculate subtotal according to quantity</li>
 
 
-## A glimpse of our website
+## Have a look ...
 
 
 ###  Sign in Page
@@ -45,7 +45,7 @@ It have a user friendly search engine and a quick delivery system. With this it 
 <img src="./img/contact.png" width="900px" height="500px"/>
 
 
-###  book details page
+###  Book details page
 
 
 <img src="./img/book.gif" width="900px" height="450px"/>
